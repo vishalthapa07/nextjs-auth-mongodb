@@ -21,6 +21,12 @@ npx create-next-app@latest
 - To send mail, we will use nodemailer:
   npm install nodemailer
 
+- To bcrypt password:
+  npm install bcryptjs
 
+- To send mail we use mailtrap:
+  https://mailtrap.io/
 
+- Install mailtrap
+  npm install mailtrap
 ```
