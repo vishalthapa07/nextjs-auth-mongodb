@@ -21,7 +21,7 @@ npx create-next-app@latest
 - To send mail, we will use nodemailer:
   npm install nodemailer
 
-- To bcrypt password:
+- To bcrypt password (for using hashed algorithm):
   npm install bcryptjs
 
 - To send mail we use mailtrap:
@@ -29,4 +29,7 @@ npx create-next-app@latest
 
 - Install mailtrap
   npm install mailtrap
+
+- Install json (to create token)
+  npm install jsonwebtoken
 ```
