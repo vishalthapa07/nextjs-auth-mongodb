@@ -47,7 +47,20 @@ export async function POST(request: NextRequest) {
       email: user.email,
     };
 
-    jwt.sign();
+    const token = jwt.sign(tokenData, process.env.TOKEN_SECRET!, {
+      expiresIn: "1d",
+    });
+
+    const response = NextResponse.json({
+      message: "Logged in success",
+      success: true,
+    });
+
+    response.cookies.set("token", token, {
+      httpOnly: true, //only server can manipulate cookie, user can see cookie but cannot changed it
+    });
+
+    return response;
   } catch (error) {
     const errorMessage =
       error instanceof Error ? error.message : "Failed to login";
