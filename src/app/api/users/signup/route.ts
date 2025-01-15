@@ -6,7 +6,6 @@ import bcryptjs from "bcryptjs";
 import { NextRequest, NextResponse } from "next/server";
 
 connect();
-
 export async function POST(request: NextRequest) {
   try {
     const reqBody = await request.json();
@@ -36,7 +35,6 @@ export async function POST(request: NextRequest) {
     console.log(savedUser);
 
     // send verification email\
-
     await sendEmail({ email, emailType: "VERIFY", userId: savedUser._id });
 
     return NextResponse.json({
